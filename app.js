@@ -15,11 +15,11 @@ function añadirAmigo() {
 
 function mostrarLista() {
     let lista = document.getElementById("listaAmigos");
-    lista.innerHTML = ""; // Vaciar la lista
+    lista.innerHTML = ""; // Limpiar lista
 
-    amigos.forEach(nombre => {
-        let li = document.createElement("li");
-        li.textContent = nombre;
-        lista.appendChild(li);
-    });
+    for (let i = 0; i < amigos.length; i++) {
+        let li = document.createElement("li"); // Crear elemento
+        li.textContent = amigos[i]; // Asignar texto
+        lista.appendChild(li); // Agregarlo a la <ul>
+    }
 }
